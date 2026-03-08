@@ -20,5 +20,14 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
+	],
+
+	"Plugins" :
+	[
+		{
+			"Name": "PCG",
+			"Enabled": true
+		}
 	]
+	
 }
