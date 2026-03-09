@@ -6,7 +6,10 @@
 #include "PCGMaterialData.generated.h"
 
 struct FPCGContext;
+struct FPCGGetDataFunctionRegistryParams;
+struct FPCGGetDataFunctionRegistryOutput;
 class UMaterialInterface;
+class UActorComponent;
 
 USTRUCT()
 struct FPCGDataTypeInfoMaterial : public FPCGDataTypeInfo
@@ -47,6 +50,9 @@ public:
 	}
 
 public:
+	static bool GetMaterialDataFromComponent(FPCGContext* InContext, const FPCGGetDataFunctionRegistryParams& InParams, UActorComponent* InActorComponent, FPCGGetDataFunctionRegistryOutput& Output);
+
+
 	//UCUTILS_API virtual const UPCGPointData* ToPointData(FPCGContext* Context, const FBox& InBounds) const override;
 	//UCUTILS_API virtual const UPCGPointArrayData* ToPointArrayData(FPCGContext* Context, const FBox& InBounds) const override;
 	//~End UPCGSpatialData interface

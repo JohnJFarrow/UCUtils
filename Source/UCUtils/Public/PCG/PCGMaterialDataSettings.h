@@ -36,6 +36,9 @@ public:
 	}
 
 protected:
+	#if WITH_EDITOR
+	virtual bool DisplayModeSettings() const override;
+	#endif
 	//~End UPCGDataFromActorSettings
 };
 

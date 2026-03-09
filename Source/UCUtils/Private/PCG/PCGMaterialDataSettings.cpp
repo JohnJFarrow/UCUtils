@@ -56,6 +56,11 @@ TArray<FPCGPinProperties> UPCGGetMaterialDataSettings::OutputPinProperties() con
 	return PinProperties;
 }
 
+bool UPCGGetMaterialDataSettings::DisplayModeSettings() const
+{
+	return false;
+}
+
 #if 0
 bool PCGGetDynamicMeshData::GetDynamicMeshDataFromActor(FPCGContext* InContext, const FPCGGetDataFunctionRegistryParams& InParams, AActor* InActor, FPCGGetDataFunctionRegistryOutput& Output)
 {
