@@ -10,7 +10,7 @@ struct FPCGGetDataFunctionRegistryOutput;
 struct FPCGGetDataFunctionRegistryParams;
 
 UCLASS(MinimalAPI, BlueprintType, ClassGroup = (Procedural))
-class UPCGGetMaterialDataSettings : public UPCGDataFromActorSettings
+class UPCGGetMaterialDataSettings : public UPCGSettings
 {
 	GENERATED_BODY()
 
@@ -25,20 +25,20 @@ public:
 	#endif
 
 protected:
+	virtual TArray<FPCGPinProperties> InputPinProperties() const override;
 	virtual TArray<FPCGPinProperties> OutputPinProperties() const override;
+	virtual FPCGElementPtr CreateElement() const override;
 	//~End UPCGSettings interface
 
-	//~Begin UPCGDataFromActorSettings interface
-public:
-	virtual EPCGDataType GetDataFilter() const override
-	{
-		return EPCGDataType::Other;
-	}
-
-protected:
-	#if WITH_EDITOR
-	virtual bool DisplayModeSettings() const override;
-	#endif
-	//~End UPCGDataFromActorSettings
 };
+
+
+class FPCGGetMaterialDataSettingsElement : public IPCGElement
+{
+protected:
+	// Begin IPCGElement interface
+	virtual bool ExecuteInternal(FPCGContext* Context) const override;
+	// End IPCGElement interface
+};
+
 
