@@ -26,7 +26,7 @@ PCG_DEFINE_TYPE_INFO(FPCGDataTypeInfoMaterial, UPCGMaterialData)
 
 
 UPCGMaterialData::UPCGMaterialData(const FObjectInitializer& ObjectInitializer)
-	: UPCGData(ObjectInitializer)
+	: UPCGSpatialData(ObjectInitializer)
 {
 }
 
@@ -307,9 +307,6 @@ bool UPCGMaterialData::GetMaterialDataFromComponent(FPCGContext* InContext, cons
 	{
 		return false;
 	}
-
-	return false;
-
 
 	// Check if it is a scene component and try to extract it.
 	if (UPCGMaterialsComponent* PCGMaterialsComponent = Cast<UPCGMaterialsComponent>(InActorComponent))

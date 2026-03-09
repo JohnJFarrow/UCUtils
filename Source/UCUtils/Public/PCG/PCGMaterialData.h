@@ -2,7 +2,7 @@
 #pragma once
 
 #include "PCGData.h"
-
+#include "Data\PCGSpatialData.h"
 #include "PCGMaterialData.generated.h"
 
 struct FPCGContext;
@@ -10,6 +10,7 @@ struct FPCGGetDataFunctionRegistryParams;
 struct FPCGGetDataFunctionRegistryOutput;
 class UMaterialInterface;
 class UActorComponent;
+
 
 USTRUCT()
 struct FPCGDataTypeInfoMaterial : public FPCGDataTypeInfo
@@ -20,7 +21,7 @@ struct FPCGDataTypeInfoMaterial : public FPCGDataTypeInfo
 };
 
 UCLASS(MinimalAPI, BlueprintType, ClassGroup = (Procedural))
-class UPCGMaterialData : public UPCGData
+class UPCGMaterialData : public UPCGSpatialData
 {
 	GENERATED_BODY()
 
