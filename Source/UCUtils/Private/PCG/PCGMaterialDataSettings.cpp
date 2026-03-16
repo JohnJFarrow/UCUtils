@@ -46,7 +46,7 @@ TArray<FPCGPinProperties> UPCGGetMaterialDataSettings::InputPinProperties() cons
 {
 	TArray<FPCGPinProperties> PinProperties;
 
-	FPCGPinProperties Pin = PinProperties.Emplace_GetRef(PCGPinConstants::DefaultInputLabel, FPCGDataTypeInfo::AsId());
+	FPCGPinProperties& Pin = PinProperties.Emplace_GetRef(PCGPinConstants::DefaultInputLabel, FPCGDataTypeInfo::AsId());
 
 	Pin.Usage = EPCGPinUsage::Normal;
 	Pin.AllowedTypes = EPCGDataType::Other;
