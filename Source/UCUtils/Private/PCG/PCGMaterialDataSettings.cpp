@@ -2,22 +2,7 @@
 
 #include "PCG/PCGMaterialDataSettings.h"
 
-#if 0
-#include "PCGContext.h"
-#include "Data/PCGDynamicMeshData.h"
-#include "Data/Registry/PCGGetDataFunctionRegistry.h"
-#include "Helpers/PCGGeometryHelpers.h"
-#include "Helpers/PCGHelpers.h"
-
-#include "DynamicMeshActor.h"
-#include "ConversionUtils/SceneComponentToDynamicMesh.h"
-#include "Materials/MaterialInterface.h"
-#endif
-
-#include UE_INLINE_GENERATED_CPP_BY_NAME(PCGMaterialDataSettings)
-
 #define LOCTEXT_NAMESPACE "PCGMaterialDataSettings"
-
 
 namespace
 {

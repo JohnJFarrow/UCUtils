@@ -9,21 +9,7 @@
 #include "PCG\PCGMaterialsComponent.h"
 #include "Materials\MaterialInstance.h"
 
-/*
-#include "PCGModule.h"
-#include "Data/PCGPointArrayData.h"
-#include "Data/PCGPointData.h"
-#include "Elements/PCGVolumeSampler.h"
-
-#include "UDynamicMesh.h"
-#include "Components/DynamicMeshComponent.h"
-#include "UObject/Package.h"
-*/
-
-#include UE_INLINE_GENERATED_CPP_BY_NAME(PCGMaterialData)
-
 PCG_DEFINE_TYPE_INFO(FPCGDataTypeInfoMaterial, UPCGMaterialData)
-
 
 UPCGMaterialData::UPCGMaterialData(const FObjectInitializer& ObjectInitializer)
 	: UPCGData(ObjectInitializer)
