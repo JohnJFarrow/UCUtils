@@ -36,9 +36,7 @@ protected:
 class FPCGGetMaterialDataSettingsElement : public IPCGElement
 {
 protected:
-	// Begin IPCGElement interface
 	virtual bool ExecuteInternal(FPCGContext* Context) const override;
-	// End IPCGElement interface
 };
 
 
